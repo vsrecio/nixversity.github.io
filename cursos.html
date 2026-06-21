@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Nixversity | Diagnóstico Técnico</title>
+    <title>Nixversity | Capacitación Corporativa y Workshops de Ingeniería</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Diagnóstico Técnico, Consultoría Cloud Native, Auditoría Kubernetes, Estimación Arquitectura, Asesoría B2B" name="keywords">
-    <meta content="Agenda un diagnóstico técnico con Nixversity para evaluar tu infraestructura Cloud Native, optimizar la latencia en servicios Golang y diseñar topologías distribuidas a escala corporativa." name="description">
+    <meta content="Capacitación Kubernetes, Cursos OpenShift, Docker, Arquitectura Cloud Native, Workshops" name="keywords">
+    <meta content="Workshops de ingeniería y capacitación corporativa avanzada en Docker, Kubernetes, OpenShift y Arquitectura Cloud Native para equipos de TI." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -38,6 +38,7 @@
     </div>
     <!-- Spinner End -->
 
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
@@ -58,7 +59,7 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar & Carousel Start -->
+    <!-- Navbar & Header Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
@@ -71,7 +72,7 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="service.html" class="nav-item nav-link">Servicios</a>
-                    <a href="cursos.html" class="nav-item nav-link">Cursos</a>
+                    <a href="cursos.html" class="nav-item nav-link active">Cursos</a>
                     <a href="about.html" class="nav-item nav-link">Nosotros</a>
                     <a href="carreras.html" class="nav-item nav-link">Carreras</a>
                 </div>
@@ -80,14 +81,19 @@
             </div>
         </nav>
 
-        <div class="container-fluid bg-primary py-5 bg-header" style="min-height: 45vh; display: flex; align-items: center;">
-            <div class="container py-5 mt-5 text-center">
-                <h1 class="display-4 text-white animated zoomIn" style="font-weight: 800;">Diagnóstico Técnico</h1>
-                <p class="fs-5 text-white-50 mx-auto" style="max-width: 700px; color: rgba(255, 255, 255, 0.85) !important;">Agendar sesión de diagnóstico técnico en inglés o español para su proyecto corporativo en EE.UU. o Latinoamérica.</p>
+        <div class="container-fluid bg-primary py-5 bg-header" style="min-height: 50vh; display: flex; align-items: center;">
+            <div class="container py-5 mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-3 text-white mb-md-4 animated zoomIn" style="font-weight: 800; line-height: 1.2;">Workshops & Capacitación Corporativa</h1>
+                        <p class="fs-4 text-white mb-0 animated slideInDown mx-auto" style="max-width: 850px; color: rgba(255, 255, 255, 0.9) !important; font-weight: 400;">Transferencia de conocimiento avanzado y habilitación tecnológica en inglés y español para equipos de desarrollo, operaciones y arquitectura en EE.UU. y Latinoamérica.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Navbar & Carousel End -->>
+    <!-- Navbar & Header End -->
+
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
@@ -108,73 +114,101 @@
     <!-- Full Screen Search End -->
 
 
-    <!-- About Start -->
+    <!-- Courses Section Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="glass-panel shadow-lg p-3 p-md-5">
-                        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                            <h5 class="fw-bold text-primary text-uppercase">Diagnóstico Técnico</h5>
-                            <h1 class="mb-0">Agendar Sesión de Ingeniería</h1>
-                        </div>
-                        <form id="diagnosticoForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label" for="diag_nombre">Nombre Completo *</label>
-                                    <input type="text" class="form-control" id="diag_nombre" placeholder="Juan Pérez" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="diag_email">Correo Corporativo *</label>
-                                    <input type="email" class="form-control" id="diag_email" placeholder="juan@empresa.com" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="diag_empresa">Nombre de la Empresa *</label>
-                                    <input type="text" class="form-control" id="diag_empresa" placeholder="Empresa S.A." required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="diag_telefono">Teléfono / WhatsApp *</label>
-                                    <input type="tel" class="form-control" id="diag_telefono" placeholder="+1 809-555-0199" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="diag_servicio">Servicio de Interés *</label>
-                                    <select class="form-select" id="diag_servicio" required>
-                                        <option value="" disabled selected>Selecciona una opción</option>
-                                        <option value="arquitectura">Diagnóstico de Arquitectura Cloud Native</option>
-                                        <option value="golang">Optimización backend Go & Concurrencia</option>
-                                        <option value="governance">Gobierno de Nube & Landing Zones</option>
-                                        <option value="devops">Platform Engineering / GitOps Automation</option>
-                                        <option value="finops">FinOps & Optimización de Costos Cloud</option>
-                                        <option value="capacitacion">Capacitación Corporativa de Equipos TI</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="diag_plataforma">Ecosistema Cloud / Tecnológico Actual *</label>
-                                    <input type="text" class="form-control" id="diag_plataforma" placeholder="Ej. AWS, Kubernetes, Golang, etc." required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="diag_fecha">Fecha Propuesta *</label>
-                                    <input type="date" class="form-control" id="diag_fecha" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="diag_hora">Hora Propuesta (Zona Horaria Local) *</label>
-                                    <input type="time" class="form-control" id="diag_hora" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="diag_mensaje">Detalle del Desafío Técnico o Proyecto *</label>
-                                    <textarea class="form-control" id="diag_mensaje" rows="4" placeholder="Describe brevemente tus necesidades de escalabilidad, problemas de arquitectura actual o el alcance del levantamiento de información..." required></textarea>
-                                </div>
-                                <div class="col-12 mt-4">
-                                    <button type="submit" class="btn btn-primary py-3 px-5 w-100" style="font-weight: 700; border-radius: 4px; box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);">Agendar Sesión de Levantamiento Técnico</button>
-                                </div>
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Workshops de Alta Ingeniería</h5>
+                <h1 class="mb-0">Programas de Habilitación para Equipos de TI</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Course 1 -->
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded d-flex flex-column h-100 p-5" style="min-height: 280px;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="service-icon me-3">
+                                <i class="fa fa-cubes text-white"></i>
                             </div>
-                        </form>
+                            <h3 class="mb-0">Docker & Containers Fundamentals</h3>
+                        </div>
+                        <p class="mb-4">Capacitación práctica enfocada en el diseño, optimización y empaquetado seguro de microservicios. Enseña a los equipos a gestionar ciclos de vida de contenedores, optimizar almacenamiento de imágenes y aplicar directrices estrictas de seguridad perimetral.</p>
+                        <ul class="list-unstyled mb-4 font-monospace text-light-muted" style="font-size: 13px;">
+                            <li><i class="fa fa-check text-primary me-2"></i>Optimización de Dockerfiles (Multi-stage)</li>
+                            <li><i class="fa fa-check text-primary me-2"></i>Seguridad de Imágenes & Escaneo de Vulnerabilidades</li>
+                            <li><i class="fa fa-check text-primary me-2"></i>Orquestación Local y Redes de Contenedores</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="solicitud.html" class="btn btn-primary py-2 px-4">Solicitar Capacitación</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="service-item bg-light rounded d-flex flex-column h-100 p-5" style="min-height: 280px;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="service-icon me-3">
+                                <i class="fa fa-network-wired text-white"></i>
+                            </div>
+                            <h3 class="mb-0">Cloud Native Architecture Patterns</h3>
+                        </div>
+                        <p class="mb-4">Workshop avanzado para arquitectos y líderes de TI orientado al diseño de sistemas distribuidos altamente resilientes. Cubre patrones de desacoplamiento, comunicación de microservicios, consistencia eventual y escalabilidad horizontal.</p>
+                        <ul class="list-unstyled mb-4 font-monospace text-light-muted" style="font-size: 13px;">
+                            <li><i class="fa fa-check text-primary me-2"></i>Event-Driven & CQRS Design Patterns</li>
+                            <li><i class="fa fa-check text-primary me-2"></i>Estrategias de Tolerancia a Fallos (Circuit Breaker)</li>
+                            <li><i class="fa fa-check text-primary me-2"></i>Observabilidad Distribuida (APM & Tracing)</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="solicitud.html" class="btn btn-primary py-2 px-4">Solicitar Capacitación</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="service-item bg-light rounded d-flex flex-column h-100 p-5" style="min-height: 280px;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="service-icon me-3">
+                                <i class="fa fa-dharmachakra text-white"></i>
+                            </div>
+                            <h3 class="mb-0">Kubernetes Administration & Governance</h3>
+                        </div>
+                        <p class="mb-4">Capacitación intensiva sobre la administración y gobernanza de clústeres Kubernetes en producción. Diseñado para preparar ingenieros de plataforma (Platform Engineers) y administradores en escalabilidad, seguridad e infraestructura automatizada.</p>
+                        <ul class="list-unstyled mb-4 font-monospace text-light-muted" style="font-size: 13px;">
+                            <li><i class="fa fa-check text-primary me-2"></i>Arquitectura de Componentes & Control Plane</li>
+                            <li><i class="fa fa-check text-primary me-2"></i>Gobernanza mediante Network Policies y RBAC</li>
+                            <li><i class="fa fa-check text-primary me-2"></i>Auto-escalado (HPA, VPA, Cluster Autoscaler)</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="solicitud.html" class="btn btn-primary py-2 px-4">Solicitar Capacitación</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="1.2s">
+                    <div class="service-item bg-light rounded d-flex flex-column h-100 p-5" style="min-height: 280px;">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="service-icon me-3">
+                                <i class="fa fa-server text-white"></i>
+                            </div>
+                            <h3 class="mb-0">Red Hat OpenShift Enterprise</h3>
+                        </div>
+                        <p class="mb-4">Workshop centrado en la plataforma de Kubernetes empresarial líder de la industria. Enseña a operar, asegurar y automatizar flujos de trabajo sobre OpenShift integrando metodologías GitOps y seguridad a nivel de sistema operativo.</p>
+                        <ul class="list-unstyled mb-4 font-monospace text-light-muted" style="font-size: 13px;">
+                            <li><i class="fa fa-check text-primary me-2"></i>Operator Lifecycle Manager (OLM)</li>
+                            <li><i class="fa fa-check text-primary me-2"></i>Seguridad y Aislamiento Avanzado con SCC</li>
+                            <li><i class="fa fa-check text-primary me-2"></i>Integración con Pipelines de CI/CD Nativos (Tekton)</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="solicitud.html" class="btn btn-primary py-2 px-4">Solicitar Capacitación</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Courses Section End -->
 
 
     <!-- Technology Stack Start -->
@@ -350,7 +384,7 @@
         </div>
     </div>
     <!-- Technology Stack End -->
-    
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -361,19 +395,13 @@
                         <a href="index.html" class="navbar-brand">
                             <img class="logovsr" src="img/x.png" alt="">
                         </a>
-                        <!-- <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-dark">Sign Up</button>
-                            </div>
-                        </form> -->
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Contactanos</h3>
+                                <h3 class="text-light mb-0">Contáctanos</h3>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
@@ -382,10 +410,6 @@
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
                                 <p class="mb-0">hello@nixversity.com</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+1 829-294-6236</p>
                             </div>
                             <div class="d-flex mt-4">
                                 <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/nixversity/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
@@ -404,7 +428,6 @@
                                 <a class="text-light mb-2" href="carreras.html"><i class="bi bi-arrow-right text-primary me-2"></i>Carreras</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -435,7 +458,6 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
